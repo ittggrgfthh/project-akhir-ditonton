@@ -1,0 +1,22 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/o8zk3QmHYMSC7UiJgFk81OFF1sc.jpg",
+      "first_air_date": "2022-08-22",
+      "genre_ids": [10766, 18],
+      "id": 204095,
+      "name": "Mar do Sertão",
+      "origin_country": ["BR"],
+      "original_language": "pt",
+      "original_name": "Mar do Sertão",
+      "overview": "",
+      "popularity": 1397.874,
+      "poster_path": "/ixgnqO8xhFMb1zr8RRFsyeZ9CdD.jpg",
+      "vote_average": 4.5,
+      "vote_count": 11
+    }
+  ],
+  "total_pages": 11,
+  "total_results": 203
+}
