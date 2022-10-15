@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "517203874531",
+    "project_id": "project-akhir-ditonton",
+    "storage_bucket": "project-akhir-ditonton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517203874531:android:cfa32e057dcf4bc59fabd6",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517203874531-3rimv87a0jdahiqnt5r9k95afjc3br6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmHXKZimrL5w7yNpoV0gsLZxZ-tXr7LRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517203874531-3rimv87a0jdahiqnt5r9k95afjc3br6a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "517203874531-g2fmtve9inhvag0gg6q8cfogr80fmcne.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dicoding.ditonton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

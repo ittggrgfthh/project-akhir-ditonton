@@ -1,5 +1,7 @@
 import 'package:core/core.dart';
 import 'package:about/about.dart';
+import 'package:ditonton/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:movies/presentation/bloc/movies_bloc.dart';
 import 'package:movies/presentation/pages/movie_detail_page.dart';
 import 'package:movies/presentation/pages/home_movie_page.dart';
@@ -23,7 +25,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ditonton/injection.dart' as di;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   di.init();
   runApp(MyApp());
 }
