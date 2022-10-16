@@ -1,3 +1,4 @@
+import 'package:core/security/ssl.dart';
 import 'package:movies/data/datasources/db/database_helper.dart';
 import 'package:movies/presentation/bloc/movies_bloc.dart';
 import 'package:tv_series/data/datasources/db/database_helper_tv.dart';
@@ -31,12 +32,13 @@ import 'package:tv_series/domain/usecases/save_tv_watchlist.dart';
 import 'package:search/domain/usecases/search_tv.dart';
 import 'package:search/presentation/bloc/search_bloc.dart';
 import 'package:tv_series/presentation/bloc/tv_bloc.dart';
-import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
+import 'package:http/io_client.dart';
 
 final locator = GetIt.instance;
 
-void init() {
+Future<void> init() async {
+  IOClient ioClient = await SSLPinning.ioClient;
   // provider
   locator.registerFactory(() => GetMovieDetailBloc(locator()));
   locator.registerFactory(() => GetNowPlayingMoviesBloc(locator()));
@@ -119,5 +121,5 @@ void init() {
   locator.registerLazySingleton<DatabaseHelperTV>(() => DatabaseHelperTV());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton<IOClient>(() => ioClient);
 }
