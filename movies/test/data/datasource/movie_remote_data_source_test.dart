@@ -1,13 +1,11 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
 import 'package:movies/data/datasources/movie_remote_data_source.dart';
 import 'package:movies/data/models/movie_detail_model.dart';
 import 'package:movies/data/models/movie_response.dart';
 import 'package:core/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:http/io_client.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../../core/test/helpers/json_reader.dart';

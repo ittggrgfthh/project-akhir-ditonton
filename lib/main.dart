@@ -1,6 +1,5 @@
 import 'package:core/core.dart';
 import 'package:about/about.dart';
-import 'package:core/security/ssl.dart';
 import 'package:ditonton/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:movies/presentation/bloc/movies_bloc.dart';
@@ -29,7 +28,7 @@ import 'package:ditonton/injection.dart' as di;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  di.init();
+  await di.init();
   runApp(MyApp());
 }
 

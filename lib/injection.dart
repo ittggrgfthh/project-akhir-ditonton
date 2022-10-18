@@ -35,15 +35,15 @@ import 'package:tv_series/presentation/bloc/tv_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/io_client.dart';
 
-final locator = GetIt.instance;
+final GetIt locator = GetIt.instance;
 
 Future<void> init() async {
   IOClient ioClient = await SSLPinning.ioClient;
-  // provider
-  locator.registerFactory(() => GetMovieDetailBloc(locator()));
+  // bloc
   locator.registerFactory(() => GetNowPlayingMoviesBloc(locator()));
   locator.registerFactory(() => GetPopularMoviesBloc(locator()));
   locator.registerFactory(() => GetTopRatedMoviesBloc(locator()));
+  locator.registerFactory(() => GetMovieDetailBloc(locator()));
   locator.registerFactory(() => GetMovieRecommendationsBloc(locator()));
   locator.registerFactory(() => GetWatchlistMoviesBloc(
         locator(),
@@ -54,10 +54,10 @@ Future<void> init() async {
   locator.registerFactory(() => SearchBloc(locator()));
 
   // TV Series
-  locator.registerFactory(() => GetTVDetailBloc(locator()));
   locator.registerFactory(() => GetTVAiringTodayBloc(locator()));
   locator.registerFactory(() => GetPopularTVBloc(locator()));
   locator.registerFactory(() => GetTopRatedTVBloc(locator()));
+  locator.registerFactory(() => GetTVDetailBloc(locator()));
   locator.registerFactory(() => GetTVRecommendationsBloc(locator()));
   locator.registerFactory(() => GetWatchlistTVBloc(
         locator(),

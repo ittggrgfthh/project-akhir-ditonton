@@ -1,7 +1,5 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:core/core.dart';
-import 'package:core/security/ssl.dart';
 
 import 'package:tv_series/data/model/tv_detail_model.dart';
 import 'package:tv_series/data/model/tv_model.dart';
