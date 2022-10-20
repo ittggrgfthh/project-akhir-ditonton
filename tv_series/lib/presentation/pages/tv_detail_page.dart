@@ -24,6 +24,9 @@ class _TVDetailPageState extends State<TVDetailPage> {
     super.initState();
     Future.microtask(() {
       context.read<GetTVDetailBloc>().add(OnTVDetail(widget.id));
+      context
+          .read<GetTVRecommendationsBloc>()
+          .add(OnTVRecommendations(widget.id));
       context.read<GetWatchlistTVBloc>().add(OnWatchlistTVStatus(widget.id));
     });
   }
